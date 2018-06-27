@@ -25,6 +25,11 @@ public class MovieServiceimpl implements MovieService {
 		return movieRepository.findAll();
 	}
 
+	@Override
+	public Movie getMovieById(Integer movieId) {
+		return movieRepository.findOne(movieId);
+	}
+
 
 
 	

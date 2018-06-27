@@ -26,4 +26,9 @@ public class MovieController {
 	}
 	
 	
+	@RequestMapping("/getMovie/{movieId}")
+	public Movie getMovieById(@PathVariable Integer movieId) {
+		return movieService.getMovieById(movieId);
+	}
+	
 }

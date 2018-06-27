@@ -9,16 +9,42 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Movie {
-	
 
 	@Column
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
 	private Integer movieId;
-    @Column
-    private String movieTitle;
-    
-    public Movie() {}
+	@Column
+	private String movieTitle;
+	@Column
+	private String movieGenre;
+	@Column
+	private String movieClassification;
+
+	public Movie() {
+	}
+	
+	public Movie(String movieTitle, String movieGenre, String movieClassification) {
+		this.movieTitle = movieTitle;
+		this.movieGenre = movieGenre;
+		this.movieClassification = movieClassification;
+	}
+
+	public String getMovieGenre() {
+		return movieGenre;
+	}
+
+	public void setMovieGenre(String movieGenre) {
+		this.movieGenre = movieGenre;
+	}
+
+	public String getMovieClassification() {
+		return movieClassification;
+	}
+
+	public void setMovieClassification(String movieClassification) {
+		this.movieClassification = movieClassification;
+	}
 
 	public Integer getMovieId() {
 		return movieId;
@@ -35,5 +61,5 @@ public class Movie {
 	public void setMovieTitle(String movieTitle) {
 		this.movieTitle = movieTitle;
 	}
-    
+
 }
