@@ -25,6 +25,8 @@ public class Showing {
 		this.movieId = movieId;
 	}
 	
+	public Showing() {}
+	
 	public Integer getShowingId() {
 		return showingId;
 	}
