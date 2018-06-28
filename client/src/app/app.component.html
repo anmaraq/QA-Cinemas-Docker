@@ -1,0 +1,29 @@
+<div style="text-align:center;">
+  <img width="100" src="https://www.verdict.co.uk/wp-content/uploads/2017/10/shutterstock_384996514.jpg">
+</div>
+<div style="text-align:center">
+  <h1>
+   {{ title }}
+  </h1>
+</div>
+
+
+<ul>
+  <li><a routerLink="/home">Home</a></li>
+  <li><a routerLink="/film">Films</a></li>
+  <li><a routerLink="/about">Times</a>
+  <li style="float:right"> <button class="active" routerLink="/about">About</button></li>
+</ul>
+
+<router-outlet></router-outlet>
+
+<div class ="footer">
+ <ul>
+ <li>
+   <h2><a routerLink="/about">Contacts</a></h2>
+ </li>
+   <li>
+   <h2><a routerLink="/about">About</a></h2>
+ </li>
+</ul>
+</div>
