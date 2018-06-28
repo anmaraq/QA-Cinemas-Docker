@@ -2,8 +2,10 @@ package com.qa.tracker.entity;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,19 +15,22 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Showing {
 
+
 	@Column
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
 	private Integer showingId;
 	@Column
 	private Date date;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "movieid")
-	private Integer movieId;
+	private Movie movie;
 	
-	public Showing(Date date, Integer movieId) {
+	public Showing() {
+	}
+	
+	public Showing(Date date) {
 		this.date = date;
-		this.movieId = movieId;
 	}
 	
 	public Integer getShowingId() {
@@ -40,11 +45,14 @@ public class Showing {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public Integer getMovieId() {
-		return movieId;
+
+	public Movie getMovie() {
+		return movie;
 	}
-	public void setMovieId(Integer movieId) {
-		this.movieId = movieId;
+
+	public void setMovie(Movie movie) {
+		this.movie = movie;
 	}
+
 
 }

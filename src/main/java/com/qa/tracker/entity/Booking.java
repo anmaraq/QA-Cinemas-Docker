@@ -1,7 +1,9 @@
 package com.qa.tracker.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,19 +19,15 @@ public class Booking{
 	private Integer bookingId;
 	@Column
 	private Integer adultTicketNo;
-	
 	@Column
 	private Integer childTicketNo;
-	
 	@Column
 	private Integer studentTicketNo;
-	
 	@Column
 	private Integer seniorTicketNo;
-	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "showingid")
-	private Integer showingId;
+	private Showing showing;
 	
 
 	public Booking() {
@@ -38,7 +36,6 @@ public class Booking{
 
 
 	public Booking(Integer adultTicketNo, Integer childTicketNo, Integer studentTicketNo, Integer seniorTicketNo) {
-		super();
 		this.adultTicketNo = adultTicketNo;
 		this.childTicketNo = childTicketNo;
 		this.studentTicketNo = studentTicketNo;
