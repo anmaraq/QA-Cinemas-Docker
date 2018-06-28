@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Showing {
@@ -17,7 +19,8 @@ public class Showing {
 	private Integer showingId;
 	@Column
 	private Date date;
-	@Column
+	@ManyToOne
+	@JoinColumn(name = "movieid")
 	private Integer movieId;
 	
 	public Showing(Date date, Integer movieId) {
