@@ -33,7 +33,6 @@ public class Booking{
 
 
 	public Booking(Integer adultTicketNo, Integer childTicketNo, Integer studentTicketNo, Integer seniorTicketNo) {
-		super();
 		this.adultTicketNo = adultTicketNo;
 		this.childTicketNo = childTicketNo;
 		this.studentTicketNo = studentTicketNo;
