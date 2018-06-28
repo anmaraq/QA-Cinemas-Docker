@@ -14,11 +14,6 @@ public class ShowingServiceImpl implements ShowingService {
 
 	@Autowired
 	ShowingRepository showingRepository;
-	
-	
-	public ShowingServiceImpl() {
-		// TODO Auto-generated constructor stub
-	}
 
 	@Override
 	public List<Showing> getAllShowings() {
