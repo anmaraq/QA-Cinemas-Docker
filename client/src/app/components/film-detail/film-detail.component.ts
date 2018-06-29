@@ -11,10 +11,10 @@ export class FilmDetailComponent implements OnInit {
 
   constructor(private _rotuer:Router) { }
 
-   film: Film = {
-    id: 1,
-    name: 'film number 1',
-  }
+  //  film: Film = {
+  //   id: 1,
+  //   name: 'film number 1',
+  // }
   ngOnInit() {
   }
 

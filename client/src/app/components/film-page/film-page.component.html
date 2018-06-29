@@ -5,6 +5,9 @@
 <h2>Films</h2>
 <ul class="films">
   <li *ngFor="let film of films">
-    <div><span class="badge">{{film.name}}</span></div>
+    <div><span class="badge">{{film.movieTitle}}</span></div>
+    <div><span class="badge">{{film.movieGenre}}</span></div>
+    <div><span class="badge">{{film.movieClassification}}</span></div>
+
   </li>
 </ul>

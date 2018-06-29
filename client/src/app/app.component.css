@@ -20,11 +20,9 @@ li {
     padding: 14px 16px;
     text-decoration: none;
 }
-
 li a:hover:not(.active) {
     background-color: #111;
 }
-
 .active {
     background-color: #4CAF50;
 }
@@ -89,7 +87,7 @@ input[type=text] {
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
-    background-position: 10px 10px; 
+    background-position: 10px 10px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
     -webkit-transition: width 0.4s ease-in-out;
@@ -101,7 +99,7 @@ input[type=text]:focus {
 }
 
 body{
-  background-color: wheat;
+  background-color: black;
 }
 
 
@@ -121,18 +119,17 @@ body{
 .footer-ul li a { color:#a0a3a4; transition: color 0.2s linear 0s, background 0.2s linear 0s; }
 .footer-ul i { margin-right:10px;}
 .footer-ul li a:hover {transition: color 0.2s linear 0s, background 0.2s linear 0s; color:#ff670f; }
-
 .social:hover {
      -webkit-transform: scale(1.1);
      -moz-transform: scale(1.1);
      -o-transform: scale(1.1);
  }*/
- 
+
  .icon-ul { list-style-type:none !important; margin:0px; padding:0px;}
  .icon-ul li { line-height:75px; width:100px; float:left;}
  .icon { float:left; margin-right:5px;}
- 
- 
+
+
 /* .copyright { min-height:40px; background-color:#000000;}*/
  .copyright p { text-align:left; color:#FFF; padding:10px 0; margin-bottom:0px;}
  .heading7 { font-size:21px; font-weight:700; color:#d9d6d6; margin-bottom:22px;}
