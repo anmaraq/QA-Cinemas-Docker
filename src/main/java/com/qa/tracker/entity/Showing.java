@@ -1,6 +1,8 @@
 package com.qa.tracker.entity;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -9,8 +11,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Showing {
@@ -22,17 +23,14 @@ public class Showing {
 	private Integer showingId;
 	@Column
 	private Date date;
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinColumn(name = "movieid")
-	private Movie movie;
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private Set<Booking> bookings = new HashSet<Booking>();
 	
-	public Showing() {
-	}
+	public Showing() {}
 	
 	public Showing(Date date) {
 		this.date = date;
 	}
-	
 	public Integer getShowingId() {
 		return showingId;
 	}
@@ -45,14 +43,14 @@ public class Showing {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-
-	public Movie getMovie() {
-		return movie;
+	public Set<Booking> getBookings() {
+		return bookings;
 	}
-
-	public void setMovie(Movie movie) {
-		this.movie = movie;
+	public void setBookings(Set<Booking> bookings) {
+		this.bookings = bookings;
 	}
-
+	public void addBooking(Booking booking) {
+		this.bookings.add(booking);
+	}
 
 }

@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.qa.tracker.entity.Booking;
-import com.qa.tracker.entity.Movie;
 import com.qa.tracker.service.BookingService;
 
 
