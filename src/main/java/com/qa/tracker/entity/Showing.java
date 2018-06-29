@@ -31,6 +31,7 @@ public class Showing {
 	public Showing(Date date) {
 		this.date = date;
 	}
+
 	public Integer getShowingId() {
 		return showingId;
 	}
