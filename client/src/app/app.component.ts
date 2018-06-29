@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-   myLogo:string="http://www.cinemamuseum.org.uk/wordpress/wp-content/uploads/2010/07/CinemaForAllLogo_XtraLarge1-488x256.jpg";
+	 myLogo:string="http://www.cinemamuseum.org.uk/wordpress/wp-content/uploads/2010/07/CinemaForAllLogo_XtraLarge1-488x256.jpg";
 
    img1:string="https://www.foxmovies.com/s3/dev-temp/en-US/__5afdb4c667023.jpg"
 
